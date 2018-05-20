@@ -97,8 +97,6 @@ function cfg_writer {
       item="${item/\}}"  # remove function close
       item="${item%)*}" # remove everything after parenthesis
       item="${item});" # add close parenthesis
-      # TODO find reason
-      item="${item/FUNCNAME\/#cfg_section_;}" # remove
       vars=""
       while [ "$item" != "" ]
       do
@@ -112,10 +110,10 @@ function cfg_writer {
          eval 'local length=${#'$var'[*]}' # test if var is an array
          if [ $length == 1 ]
          then
-            echo $var=${!var} #output var
+            echo $var=\"${!var}\" #output var
          else 
             echo ";$var is an array" # add comment denoting var is an array
-            eval 'echo $var=${'$var'[*]}' # output array var
+            eval 'echo $var=\"${'$var'[*]}\"' # output array var
          fi
       done
    done

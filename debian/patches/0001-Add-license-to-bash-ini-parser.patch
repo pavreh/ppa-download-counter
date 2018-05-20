@@ -1,0 +1,37 @@
+From 4217248b18191419b5007f855083287ece11d5ae Mon Sep 17 00:00:00 2001
+Message-Id: <4217248b18191419b5007f855083287ece11d5ae.1526826164.git.pavel-rehak@email.cz>
+From: Pavel Rehak <pavel-rehak@email.cz>
+Date: Sun, 20 May 2018 16:01:45 +0200
+Subject: [PATCH] Add license to bash-ini-parser.
+
+---
+ bash-ini-parser | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+
+diff --git a/bash-ini-parser b/bash-ini-parser
+index 23384e0..be91580 100755
+--- a/bash-ini-parser
++++ b/bash-ini-parser
+@@ -1,3 +1,19 @@
++#    bash-ini-parser
++#    Copyright (C) 2015-2018 Alberto Fanjul <https://github.com/albfan>
++#
++#    This program is free software: you can redistribute it and/or modify
++#    it under the terms of the GNU General Public License as published by
++#    the Free Software Foundation, either version 3 of the License, or
++#    (at your option) any later version.
++#
++#    This program is distributed in the hope that it will be useful,
++#    but WITHOUT ANY WARRANTY; without even the implied warranty of
++#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++#    GNU General Public License for more details.
++#
++#    You should have received a copy of the GNU General Public License
++#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
++#
+ #
+ # based on http://theoldschooldevops.com/2008/02/09/bash-ini-parser/
+ #
+-- 
+2.17.0
+

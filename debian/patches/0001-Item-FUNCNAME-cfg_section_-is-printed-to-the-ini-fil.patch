@@ -1,0 +1,26 @@
+From 0d27f7c71ffe8813bbae9a663583927a5c291b43 Mon Sep 17 00:00:00 2001
+Message-Id: <0d27f7c71ffe8813bbae9a663583927a5c291b43.1526826059.git.pavel-rehak@email.cz>
+From: Pavel Rehak <pavel-rehak@email.cz>
+Date: Sun, 20 May 2018 16:14:16 +0200
+Subject: [PATCH] Item/FUNCNAME\/#cfg_section_; is printed to the ini file.
+
+---
+ bash-ini-parser | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/bash-ini-parser b/bash-ini-parser
+index 23384e0..dcacf2d 100755
+--- a/bash-ini-parser
++++ b/bash-ini-parser
+@@ -95,6 +95,8 @@ function cfg_writer {
+       item="${item/\}}"  # remove function close
+       item="${item%)*}" # remove everything after parenthesis
+       item="${item});" # add close parenthesis
++      # TODO find the reason
++      item="${item/FUNCNAME\/#cfg_section_;}" # remove
+       vars=""
+       while [ "$item" != "" ]
+       do
+-- 
+2.17.0
+
