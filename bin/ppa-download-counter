@@ -28,7 +28,7 @@ version="0.1.0 UNRELEASED"
 # Files
 download_statistics=$HOME/.config/$package/download_statistics
 configfile=$HOME/.config/$package/ppa-download-counter.cfg
-icon=$HOME/Git/$package/share/icons/hicolor/48x48/apps/if_4_1668043.png
+icon="../share/icons/hicolor/48x48/apps/if_4_1668043.png"
 
 # Needed for yad
 ifs=$IFS
