@@ -15,7 +15,7 @@ icon=$HOME/Git/$package/share/icons/hicolor/48x48/apps/if_4_1668043.png
 
 ifs=$IFS
 
-. bash-ini-parser
+source "../share/ppa-download-counter/bash-ini-parser"
 
 
 ##############################################################################
