@@ -274,6 +274,7 @@ do
     yad --list \
         --title="$title" \
         --window-icon=$icon \
+        --no-selection \
         --button="Close":0 \
         --button=$button1_text:1 \
         --button=$ok_text:2 \
