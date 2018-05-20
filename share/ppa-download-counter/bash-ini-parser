@@ -31,8 +31,8 @@ function cfg_parser {
    debug "escaped ["
    ini="${ini//]/\\]}"
    debug "escaped ]"
-   ini="${ini//\$/}" &&      # remove executable
-   ini="${ini//\`/}" &&       # remove executable
+   ini="${ini//\$/}"            # remove executable
+   ini="${ini//\`/}"            # remove executable
    IFS=$'\n' && ini=( ${ini} )  # convert to line-array
    debug
    ini=( ${ini[*]/#*([[:space:]]);*/} )
