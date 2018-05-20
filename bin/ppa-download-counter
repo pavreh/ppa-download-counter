@@ -281,7 +281,7 @@ do
         --column="PPA" \
         --column="Package" \
         --column="Version" \
-        --column="Distro" \
+        --column="Release" \
         --column="Arch" \
         --column="Downloads":NUM \
         $all_data
