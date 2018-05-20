@@ -103,10 +103,12 @@ do
                 adresses="$adresses
 https://api.launchpad.net/1.0/~$ppa_user/+archive/ubuntu/$ppa_name/+binarypub/$line?ws.op=getDownloadCount"
             done <<< "$ids_binaries"
-            adresses=$(echo "$adresses" | sed 1d)
+            adresses=$(echo "$adresses" |
+                       sed 1d)
             
             # Progressbar
-            length_adresses=$(echo "$adresses" | wc -l)
+            length_adresses=$(echo "$adresses" |
+                              wc -l)
             progress_part2=$(($progress_part/$length_adresses))
             progress2=$progress
     
@@ -127,14 +129,18 @@ $count"
                              sed 1d )
 
             # merge data
-            merged_data=$(paste <(echo "$description_binaries") <(echo "$download_count"))
+            merged_data=$(paste \
+                          <(echo "$description_binaries") \
+                          <(echo "$download_count"))
             all_data="$all_data
 $merged_data"
         done
     done
 done
 
-all_data=$(echo "$all_data" | sed 's/in //g' | tee $download_statistics )
+all_data=$(echo "$all_data" |
+           sed 's/in //g' |
+           tee $download_statistics )
 
 # Progressbar
 echo 100
