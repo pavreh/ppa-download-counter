@@ -27,7 +27,7 @@ version="0.1.0 UNRELEASED"
 
 # Files
 download_statistics=$HOME/.config/$package/download_statistics
-configfile=$HOME/.config/$package/ppa-download-counter.cfg
+configfile=$HOME/.config/$package/ppa-download-counter.ini
 icon="../share/icons/hicolor/48x48/apps/$package.png"
 
 # Needed for yad
@@ -163,43 +163,12 @@ echo 100
 
 set_config_file()
 {
-config_file='# PPA Download Counter Settings
-
-
-[settings]
-
-# Replace "joe" by required user name. Only one user name is allowed.
-ppa_user=joe
-
-# Set one or more PPAs divided by whitespace.
-# E.g. all_ppas=ppa1 ppa2 ppa3
-# Default all_ppas=ppa
-all_ppas=ppa
-
-# Set one or more architectures divided by whitespace.
-# Default all_architectures=i386 amd64
-all_architectures=i386 amd64
-
-# Set one or more distributions name divided by whitespace.
-# Default all_distros=trusty xenial artful bionic cosmic
-all_distros=trusty xenial artful bionic cosmic
-
-# Set one packages status.
-# Posible values: 
-#    Pending
-#    Published
-#    Superseded
-#    Deleted
-#    Obsolete
-# Default binary_status=Published
-binary_status=Published
-'
-
 if test -e "$configfile"
 then
     gedit --wait "$configfile"
 else
-    echo "$config_file" > "$configfile" 
+    cp "../share/ppa-download-counter/ppa-download-counter.ini" \
+       "$HOME/.config/$package/"
     gedit --wait "$configfile"
 fi
 }
