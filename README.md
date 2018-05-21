@@ -5,4 +5,4 @@ GTK+ GUI tool for checking number of downloads from PPA.
 ![ppa-download-counter](/git_files/screenshot.png?raw=true)
 
 ## Download and Install
-PPA Download Counter is under development. Deb package will be available later.
+[PPA](https://launchpad.net/~pavreh/+archive/ubuntu/ppa)
