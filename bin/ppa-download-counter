@@ -33,6 +33,13 @@ icon="../share/icons/hicolor/48x48/apps/$package.png"
 # Needed for yad
 ifs=$IFS
 
+# check installed packages
+if dpkg --status xed \
+   >/dev/null
+then
+    alias gedit=xed
+fi
+
 
 ##############################################################################
 #    Gettext
