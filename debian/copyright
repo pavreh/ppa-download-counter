@@ -8,6 +8,7 @@ License: GPL-3
 
 Files: share/ppa-download-counter/bash-ini-parser
 Copyright: 2015-2018 Alberto Fanjul <https://github.com/albfan>
+                2018 Pavel Řehák <pavel-rehak@email.cz>
 License: GPL-3
 
 Files: share/icons/*

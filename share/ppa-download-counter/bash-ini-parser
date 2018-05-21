@@ -1,3 +1,20 @@
+#    bash-ini-parser
+#    Copyright (C) 2015-2018 Alberto Fanjul <https://github.com/albfan>
+#                       2018 Pavel Řehák <pavel-rehak@email.cz>
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
 #
 # based on http://theoldschooldevops.com/2008/02/09/bash-ini-parser/
 #
@@ -97,6 +114,8 @@ function cfg_writer {
       item="${item/\}}"  # remove function close
       item="${item%)*}" # remove everything after parenthesis
       item="${item});" # add close parenthesis
+      # TODO find the reason
+      item="${item/FUNCNAME\/#cfg_section_;}" # remove
       vars=""
       while [ "$item" != "" ]
       do
@@ -113,7 +132,7 @@ function cfg_writer {
             echo $var=\"${!var}\" #output var
          else 
             echo ";$var is an array" # add comment denoting var is an array
-            eval 'echo $var=\"${'$var'[*]}\"' # output array var
+            eval 'echo $var=${'$var'[*]}' # output array var
          fi
       done
    done
