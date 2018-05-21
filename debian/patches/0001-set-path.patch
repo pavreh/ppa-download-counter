@@ -1,0 +1,44 @@
+From 554aed43d78c9b92593de6a63dd7065b9458e94d Mon Sep 17 00:00:00 2001
+Message-Id: <554aed43d78c9b92593de6a63dd7065b9458e94d.1526927208.git.pavel-rehak@email.cz>
+From: Pavel Rehak <pavel-rehak@email.cz>
+Date: Mon, 21 May 2018 20:26:34 +0200
+Subject: [PATCH] set path
+
+---
+ bin/ppa-download-counter | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/bin/ppa-download-counter b/bin/ppa-download-counter
+index fbee51f..9dfd9b6 100755
+--- a/bin/ppa-download-counter
++++ b/bin/ppa-download-counter
+@@ -28,7 +28,7 @@ version="0.1.0 UNRELEASED"
+ # Files
+ download_statistics=$HOME/.config/$package/download_statistics
+ configfile=$HOME/.config/$package/ppa-download-counter.ini
+-icon="../share/icons/hicolor/48x48/apps/$package.png"
++icon="/usr/share/icons/hicolor/48x48/apps/$package.png"
+ 
+ # Needed for yad
+ ifs=$IFS
+@@ -174,7 +174,7 @@ if test -e "$configfile"
+ then
+     gedit --wait "$configfile"
+ else
+-    cp "../share/ppa-download-counter/ppa-download-counter.ini" \
++    cp "/usr/share/ppa-download-counter/ppa-download-counter.ini" \
+        "$HOME/.config/$package/"
+     gedit --wait "$configfile"
+ fi
+@@ -226,7 +226,7 @@ done
+ ##############################################################################
+ 
+ 
+-source "../share/ppa-download-counter/bash-ini-parser"
++source "/usr/share/ppa-download-counter/bash-ini-parser"
+ 
+ run=1
+ 
+-- 
+2.17.0
+
