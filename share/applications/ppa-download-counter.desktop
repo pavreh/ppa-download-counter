@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=PPA Download Counter
+Comment=Check downloads from PPA
+Exec=ppa-download-counter
+Icon=ppa-download-counter
+Terminal=false
+Type=Application
+Categories=Network
+
