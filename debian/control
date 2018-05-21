@@ -10,5 +10,6 @@ Package: ppa-download-counter
 Architecture: all
 Depends: ${misc:Depends}, yad, jq, gedit | xed
 Suggests:
-Description: 
+Description: Check downloads from PPA
+ GTK+ GUI tool for checking number of downloads from PPA.
 
