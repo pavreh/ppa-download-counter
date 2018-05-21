@@ -271,6 +271,7 @@ do
        yad --progress \
            --title="$title" \
            --window-icon=$icon \
+           --progress-text='' \
            --width=300 \
            --text "Checking data..." \
            --auto-close ;;
