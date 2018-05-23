@@ -1,0 +1,55 @@
+# Translation of ppa-download-counter to Czech.
+# Copyright (C) 2018 Pavel Řehák
+# This file is distributed under the same license as the ppa-download-counter package.
+# Pavel Rehak <pavel-rehak@email.cz>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-23 23:20+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pavel Rehak <pavel-rehak@email.cz>\n"
+"Language-Team: \n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.4\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: ../bin/ppa-download-counter:234
+msgid "Settings"
+msgstr "Nastavení"
+
+#: ../bin/ppa-download-counter:235
+msgid "Refresh"
+msgstr "Obnovit"
+
+#: ../bin/ppa-download-counter:250
+msgid "Close"
+msgstr "Zavřít"
+
+#: ../bin/ppa-download-counter:256
+msgid "Package"
+msgstr "Balík"
+
+#: ../bin/ppa-download-counter:257
+msgid "Version"
+msgstr "Verze"
+
+#: ../bin/ppa-download-counter:258
+msgid "Release"
+msgstr "Vydání"
+
+#: ../bin/ppa-download-counter:259
+msgid "Arch"
+msgstr "Arch"
+
+#: ../bin/ppa-download-counter:260
+msgid "Downloads"
+msgstr "Staženo"
+
+#: ../bin/ppa-download-counter:274
+msgid "Checking data..."
+msgstr "Aktualizují se data..."

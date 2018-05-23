@@ -231,9 +231,8 @@ source "../share/ppa-download-counter/bash-ini-parser"
 run=1
 
 check_config_file
-# TODO gettext
-button1_text="Settings"
-ok_text="Refresh"
+button1_text="$(gettext Settings)"
+ok_text="$(gettext Refresh)"
 
 while [ "$run" = "1" ]
 do
@@ -248,17 +247,17 @@ do
         --title="$title" \
         --window-icon=$icon \
         --no-selection \
-        --button="Close":0 \
+        --button="$(gettext Close)":0 \
         --button=$button1_text:1 \
         --button=$ok_text:2 \
         --width=600 \
         --height=400 \
         --column="PPA" \
-        --column="Package" \
-        --column="Version" \
-        --column="Release" \
-        --column="Arch" \
-        --column="Downloads":NUM \
+        --column="$(gettext Package)" \
+        --column="$(gettext Version)" \
+        --column="$(gettext Release)" \
+        --column="$(gettext Arch)" \
+        --column="$(gettext Downloads)":NUM \
         $all_data
 
     status=$?
@@ -272,7 +271,7 @@ do
            --window-icon=$icon \
            --progress-text='' \
            --width=300 \
-           --text "Checking data..." \
+           --text "$(gettext 'Checking data...')" \
            --auto-close ;;
     esac
 done
