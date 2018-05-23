@@ -242,8 +242,7 @@ do
     # Needed for yad $all_data
     IFS=$ifs
     # TODO arch = unspecified dostro = unspecified
-    all_data=$(cat $download_statistics |
-               awk '!a[$1$2$3$6]++' )
+    all_data=$(awk '!a[$1$2$3$6]++' $download_statistics)
                             
     yad --list \
         --title="$title" \
