@@ -23,7 +23,7 @@
 
 title="PPA Download Counter"
 package="ppa-download-counter"
-version="0.1.0 UNRELEASED"
+version="1.0.0 UNRELEASED"
 
 # Files
 download_statistics=$HOME/.config/$package/download_statistics
@@ -32,13 +32,6 @@ icon="../share/icons/hicolor/48x48/apps/$package.png"
 
 # Needed for yad
 ifs=$IFS
-
-# check installed packages
-if dpkg --status xed \
-   >/dev/null
-then
-    alias gedit=xed
-fi
 
 
 ##############################################################################
@@ -168,15 +161,116 @@ echo 100
 }
 
 
+config_window()
+{
+fkey=$(($RANDOM * $$))
+yad --form \
+    --plug="$fkey" \
+    --tabnum=1 \
+    --separator="" \
+    --text="$(gettext 'Set one user name')" \
+    --field="":CE"user" \
+      "$ppa_user" > /tmp/pdc_ppa_user &
+
+yad --list \
+    --plug="$fkey" \
+    --tabnum=2 \
+    --editable \
+    --no-headers \
+    --print-all \
+    --grid-lines=horizontal \
+    --separator=" " \
+    --text="$(gettext 'Set one or more PPAs')" \
+    --column="" \
+      ${all_ppas[*]} > /tmp/pdc_all_ppas &
+
+yad --list \
+    --plug="$fkey" \
+    --tabnum=3 \
+    --editable \
+    --no-headers \
+    --print-all \
+    --grid-lines=horizontal \
+    --separator=" " \
+    --text="$(gettext 'Set one or more distros')" \
+    --column="" \
+      ${all_distros[*]} > /tmp/pdc_all_distros &
+
+yad --list \
+    --plug="$fkey" \
+    --tabnum=4 \
+    --editable \
+    --no-headers \
+    --print-all \
+    --grid-lines=horizontal \
+    --separator=" " \
+    --text="$(gettext 'Set one or more architectures')" \
+    --column="" \
+      ${all_architectures[*]} > /tmp/pdc_all_architectures &
+
+yad --list \
+    --plug="$fkey" \
+    --tabnum=5 \
+    --radiolist \
+    --no-headers \
+    --no-selection \
+    --hide-column=3 \
+    --separator="" \
+    --print-column=3 \
+    --text="$(gettext 'Set one packages status. Now:') $(gettext $binary_status)" \
+    --column="" \
+    --column="" \
+    --column="" \
+      "" "$(gettext Pending)" "Pending" \
+      "" "$(gettext Published)" "Published" \
+      "" "$(gettext Superseded)" "Superseded" \
+      "" "$(gettext Deleted)" "Deleted" \
+      "" "$(gettext Obsolete)" "Obsolete" > /tmp/pdc_binary_status &
+
+if yad --notebook \
+       --key="$fkey" \
+       --title="$title" \
+       --window-icon=$icon \
+       --tab="$(gettext User)" \
+       --tab="$(gettext PPAs)" \
+       --tab="$(gettext Distro)" \
+       --tab="$(gettext Arch)" \
+       --tab="$(gettext Status)" \
+       --width=600 \
+       --height=400
+then
+    ppa_user=$(cat /tmp/pdc_ppa_user)
+    all_ppas=$(cat /tmp/pdc_all_ppas)
+    all_distros=$(cat /tmp/pdc_all_distros)
+    all_architectures=$(cat /tmp/pdc_all_architectures)
+    binary_status_tmp=$(cat /tmp/pdc_binary_status)
+    cfg_update settings ppa_user
+    cfg_writer > $configfile
+    cfg_update settings all_ppas
+    cfg_writer > $configfile
+    cfg_update settings all_distros
+    cfg_writer > $configfile
+    cfg_update settings all_architectures
+    cfg_writer > $configfile
+    if ! [[ "$binary_status_tmp" = "" ]]
+    then
+        binary_status=$binary_status_tmp
+        cfg_update settings binary_status
+        cfg_writer > $configfile
+    fi
+fi
+}
+
+
 set_config_file()
 {
 if test -e "$configfile"
 then
-    gedit --wait "$configfile"
+    config_window
 else
     cp "../share/ppa-download-counter/ppa-download-counter.ini" \
        "$HOME/.config/$package/"
-    gedit --wait "$configfile"
+    config_window
 fi
 }
 

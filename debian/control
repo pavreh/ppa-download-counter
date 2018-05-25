@@ -8,7 +8,7 @@ Homepage: https://github.com/pavreh/ppa-download-counter
 
 Package: ppa-download-counter
 Architecture: all
-Depends: ${misc:Depends}, yad, jq, gedit | xed
+Depends: ${misc:Depends}, yad, jq
 Suggests:
 Description: Check downloads from PPA
  GTK+ GUI tool for checking number of downloads from PPA.
