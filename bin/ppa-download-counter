@@ -270,6 +270,8 @@ then
 else
     cp "../share/ppa-download-counter/ppa-download-counter.ini" \
        "$HOME/.config/$package/"
+    cfg_parser "$configfile"
+    cfg_section_settings
     config_window
 fi
 }
