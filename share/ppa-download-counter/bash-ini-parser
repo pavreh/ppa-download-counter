@@ -1,5 +1,7 @@
 #    bash-ini-parser
-#    Copyright (C) 2015-2018 Alberto Fanjul <https://github.com/albfan>
+#    Copyright (C)      2008 Andrés J. Díaz <https://github.com/ajdiaz>
+#                  2015-2018 Alberto Fanjul <https://github.com/albfan>
+#                            and contributors
 #                       2018 Pavel Řehák <pavel-rehak@email.cz>
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -101,7 +103,7 @@ function cfg_writer {
       fun="$(declare -F $PREFIX$SECTION)"
       if [ -z "$fun" ]
       then
-         echo "section $SECTION not found" >2
+         echo "section $SECTION not found" 1>&2
          exit 1
       fi
    fi
@@ -111,18 +113,18 @@ function cfg_writer {
       item="$(declare -f ${f})"
       item="${item##*\{}" # remove function definition
       item="${item##*FUNCNAME*$PREFIX\};}" # remove clear section
+      item="${item/FUNCNAME\/#$PREFIX;}" # remove line
       item="${item/\}}"  # remove function close
       item="${item%)*}" # remove everything after parenthesis
       item="${item});" # add close parenthesis
-      # TODO find the reason
-      item="${item/FUNCNAME\/#cfg_section_;}" # remove
       vars=""
       while [ "$item" != "" ]
       do
          newvar="${item%%=*}" # get item name
-         vars="$vars $newvar" # add name to collection
+         vars="$vars$newvar" # add name to collection
          item="${item#*;}" # remove readed line
       done
+      vars=$(echo "$vars" | sort -u) # remove duplication
       eval $f
       echo "[${f#$PREFIX}]" # output section
       for var in $vars; do
@@ -150,7 +152,7 @@ function cfg_unset {
       fun="$(declare -F $PREFIX$SECTION)"
       if [ -z "$fun" ]
       then
-         echo "section $SECTION not found" >2
+         echo "section $SECTION not found" 1>&2
          return
       fi
    fi
@@ -188,7 +190,7 @@ function cfg_clear {
       fun="$(declare -F $PREFIX$SECTION)"
       if [ -z "$fun" ]
       then
-         echo "section $SECTION not found" >2
+         echo "section $SECTION not found" 1>&2
          exit 1
       fi
    fi
@@ -208,7 +210,7 @@ function cfg_update {
    fun="$(declare -F $PREFIX$SECTION)"
    if [ -z "$fun" ]
    then
-      echo "section $SECTION not found" >2
+      echo "section $SECTION not found" 1>&2
       exit 1
    fi
    fun="${fun//declare -f/}"
