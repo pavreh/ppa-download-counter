@@ -36,7 +36,7 @@ msgstr "Zadejte jednu nebo více architektur"
 
 #: ../bin/ppa-download-counter:220
 msgid "Set one packages status. Now:"
-msgstr "Zadejte jeden stav balíku. Nyní:"
+msgstr "Zadejte jeden stav balíků. Nyní:"
 
 #: ../bin/ppa-download-counter:224
 msgid "Pending"
@@ -44,19 +44,19 @@ msgstr "Čekající"
 
 #: ../bin/ppa-download-counter:225
 msgid "Published"
-msgstr "Uveřejněný"
+msgstr "Uveřejněné"
 
 #: ../bin/ppa-download-counter:226
 msgid "Superseded"
-msgstr "Nahrazený"
+msgstr "Nahrazené"
 
 #: ../bin/ppa-download-counter:227
 msgid "Deleted"
-msgstr "Odstraněný"
+msgstr "Odstraněné"
 
 #: ../bin/ppa-download-counter:228
 msgid "Obsolete"
-msgstr "Zastaralý"
+msgstr "Zastaralé"
 
 #: ../bin/ppa-download-counter:234
 msgid "User"
