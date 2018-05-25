@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-23 23:20+0200\n"
+"POT-Creation-Date: 2018-05-25 22:43+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Pavel Rehak <pavel-rehak@email.cz>\n"
 "Language-Team: \n"
@@ -18,38 +18,97 @@ msgstr ""
 "X-Generator: Poedit 2.0.4\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
+#: ../bin/ppa-download-counter:171
+msgid "Set one user name"
+msgstr "Zadejte jedno uživatelské jméno"
+
+#: ../bin/ppa-download-counter:183
+msgid "Set one or more PPAs"
+msgstr "Zadejte jedno nebo více PPA"
+
+#: ../bin/ppa-download-counter:195
+msgid "Set one or more distros"
+msgstr "Zadejte jednu nebo více distribucí"
+
+#: ../bin/ppa-download-counter:207
+msgid "Set one or more architectures"
+msgstr "Zadejte jednu nebo více architektur"
+
+#: ../bin/ppa-download-counter:220
+msgid "Set one packages status. Now:"
+msgstr "Zadejte jeden stav balíku. Nyní:"
+
+#: ../bin/ppa-download-counter:224
+msgid "Pending"
+msgstr "Čekající"
+
+#: ../bin/ppa-download-counter:225
+msgid "Published"
+msgstr "Uveřejněný"
+
+#: ../bin/ppa-download-counter:226
+msgid "Superseded"
+msgstr "Nahrazený"
+
+#: ../bin/ppa-download-counter:227
+msgid "Deleted"
+msgstr "Odstraněný"
+
+#: ../bin/ppa-download-counter:228
+msgid "Obsolete"
+msgstr "Zastaralý"
+
 #: ../bin/ppa-download-counter:234
-msgid "Settings"
-msgstr "Nastavení"
+msgid "User"
+msgstr "Uživatel"
 
 #: ../bin/ppa-download-counter:235
-msgid "Refresh"
-msgstr "Obnovit"
+msgid "PPAs"
+msgstr "PPA"
 
-#: ../bin/ppa-download-counter:250
-msgid "Close"
-msgstr "Zavřít"
+#: ../bin/ppa-download-counter:236
+msgid "Distro"
+msgstr "Distribuce"
 
-#: ../bin/ppa-download-counter:256
-msgid "Package"
-msgstr "Balík"
-
-#: ../bin/ppa-download-counter:257
-msgid "Version"
-msgstr "Verze"
-
-#: ../bin/ppa-download-counter:258
-msgid "Release"
-msgstr "Vydání"
-
-#: ../bin/ppa-download-counter:259
+#: ../bin/ppa-download-counter:237 ../bin/ppa-download-counter:351
 msgid "Arch"
 msgstr "Arch"
 
-#: ../bin/ppa-download-counter:260
+#: ../bin/ppa-download-counter:238
+msgid "Status"
+msgstr "Stav"
+
+#: ../bin/ppa-download-counter:342
+msgid "Close"
+msgstr "Zavřít"
+
+#: ../bin/ppa-download-counter:343
+msgid "Settings"
+msgstr "Nastavení"
+
+#: ../bin/ppa-download-counter:344
+msgid "Refresh"
+msgstr "Obnovit"
+
+#: ../bin/ppa-download-counter:348
+msgid "Package"
+msgstr "Balík"
+
+#: ../bin/ppa-download-counter:349
+msgid "Version"
+msgstr "Verze"
+
+#: ../bin/ppa-download-counter:350
+msgid "Release"
+msgstr "Vydání"
+
+#: ../bin/ppa-download-counter:352
 msgid "Downloads"
 msgstr "Staženo"
 
-#: ../bin/ppa-download-counter:274
-msgid "Checking data..."
+#: ../bin/ppa-download-counter:366
+msgid "Updating data..."
 msgstr "Aktualizují se data..."
+
+#~ msgid "Checking data..."
+#~ msgstr "Aktualizují se data..."

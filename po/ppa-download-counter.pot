@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-23 23:20+0200\n"
+"POT-Creation-Date: 2018-05-25 22:43+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,38 +17,94 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: ../bin/ppa-download-counter:171
+msgid "Set one user name"
+msgstr ""
+
+#: ../bin/ppa-download-counter:183
+msgid "Set one or more PPAs"
+msgstr ""
+
+#: ../bin/ppa-download-counter:195
+msgid "Set one or more distros"
+msgstr ""
+
+#: ../bin/ppa-download-counter:207
+msgid "Set one or more architectures"
+msgstr ""
+
+#: ../bin/ppa-download-counter:220
+msgid "Set one packages status. Now:"
+msgstr ""
+
+#: ../bin/ppa-download-counter:224
+msgid "Pending"
+msgstr ""
+
+#: ../bin/ppa-download-counter:225
+msgid "Published"
+msgstr ""
+
+#: ../bin/ppa-download-counter:226
+msgid "Superseded"
+msgstr ""
+
+#: ../bin/ppa-download-counter:227
+msgid "Deleted"
+msgstr ""
+
+#: ../bin/ppa-download-counter:228
+msgid "Obsolete"
+msgstr ""
+
 #: ../bin/ppa-download-counter:234
-msgid "Settings"
+msgid "User"
 msgstr ""
 
 #: ../bin/ppa-download-counter:235
-msgid "Refresh"
+msgid "PPAs"
 msgstr ""
 
-#: ../bin/ppa-download-counter:250
-msgid "Close"
+#: ../bin/ppa-download-counter:236
+msgid "Distro"
 msgstr ""
 
-#: ../bin/ppa-download-counter:256
-msgid "Package"
-msgstr ""
-
-#: ../bin/ppa-download-counter:257
-msgid "Version"
-msgstr ""
-
-#: ../bin/ppa-download-counter:258
-msgid "Release"
-msgstr ""
-
-#: ../bin/ppa-download-counter:259
+#: ../bin/ppa-download-counter:237 ../bin/ppa-download-counter:351
 msgid "Arch"
 msgstr ""
 
-#: ../bin/ppa-download-counter:260
+#: ../bin/ppa-download-counter:238
+msgid "Status"
+msgstr ""
+
+#: ../bin/ppa-download-counter:342
+msgid "Close"
+msgstr ""
+
+#: ../bin/ppa-download-counter:343
+msgid "Settings"
+msgstr ""
+
+#: ../bin/ppa-download-counter:344
+msgid "Refresh"
+msgstr ""
+
+#: ../bin/ppa-download-counter:348
+msgid "Package"
+msgstr ""
+
+#: ../bin/ppa-download-counter:349
+msgid "Version"
+msgstr ""
+
+#: ../bin/ppa-download-counter:350
+msgid "Release"
+msgstr ""
+
+#: ../bin/ppa-download-counter:352
 msgid "Downloads"
 msgstr ""
 
-#: ../bin/ppa-download-counter:274
-msgid "Checking data..."
+#: ../bin/ppa-download-counter:366
+msgid "Updating data..."
 msgstr ""

@@ -325,8 +325,6 @@ source "../share/ppa-download-counter/bash-ini-parser"
 run=1
 
 check_config_file
-button1_text="$(gettext Settings)"
-ok_text="$(gettext Refresh)"
 
 while [ "$run" = "1" ]
 do
@@ -342,8 +340,8 @@ do
         --window-icon=$icon \
         --no-selection \
         --button="$(gettext Close)":0 \
-        --button=$button1_text:1 \
-        --button=$ok_text:2 \
+        --button="$(gettext Settings)":1 \
+        --button="$(gettext Refresh)":2 \
         --width=600 \
         --height=400 \
         --column="PPA" \
@@ -365,7 +363,7 @@ do
            --window-icon=$icon \
            --progress-text='' \
            --width=300 \
-           --text "$(gettext 'Checking data...')" \
+           --text "$(gettext 'Updating data...')" \
            --auto-close ;;
     esac
 done
