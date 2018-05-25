@@ -350,7 +350,7 @@ do
         --column="$(gettext Release)" \
         --column="$(gettext Arch)" \
         --column="$(gettext Downloads)":NUM \
-        $all_data
+          $all_data
 
     status=$?
     case $status in
