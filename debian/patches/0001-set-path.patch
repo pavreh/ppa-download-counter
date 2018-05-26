@@ -12,7 +12,7 @@ diff --git a/bin/ppa-download-counter b/bin/ppa-download-counter
 index fbee51f..9dfd9b6 100755
 --- a/bin/ppa-download-counter
 +++ b/bin/ppa-download-counter
-@@ -28,7 +28,7 @@ version="0.1.0 UNRELEASED"
+@@ -28,7 +28,7 @@ "
  # Files
  download_statistics=$HOME/.config/$package/download_statistics
  configfile=$HOME/.config/$package/ppa-download-counter.ini
@@ -23,12 +23,12 @@ index fbee51f..9dfd9b6 100755
  ifs=$IFS
 @@ -174,7 +174,7 @@ if test -e "$configfile"
  then
-     gedit --wait "$configfile"
+     config_window
  else
 -    cp "../share/ppa-download-counter/ppa-download-counter.ini" \
 +    cp "/usr/share/ppa-download-counter/ppa-download-counter.ini" \
         "$HOME/.config/$package/"
-     gedit --wait "$configfile"
+     config_window
  fi
 @@ -226,7 +226,7 @@ done
  ##############################################################################

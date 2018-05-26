@@ -23,7 +23,8 @@
 
 title="PPA Download Counter"
 package="ppa-download-counter"
-version="1.0.0 UNRELEASED"
+version="0.2.0"
+
 
 # Files
 download_statistics=$HOME/.config/$package/download_statistics
