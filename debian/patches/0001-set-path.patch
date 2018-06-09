@@ -28,11 +28,11 @@ index fbee51f..9dfd9b6 100755
 -    cp "../share/ppa-download-counter/ppa-download-counter.ini" \
 +    cp "/usr/share/ppa-download-counter/ppa-download-counter.ini" \
         "$HOME/.config/$package/"
-     config_window
- fi
-@@ -226,7 +226,7 @@ done
- ##############################################################################
+    cfg_parser "$configfile"
+    cfg_section_settings
+@@ -226,7 +226,7 @@ 
  
+ ##############################################################################
  
 -source "../share/ppa-download-counter/bash-ini-parser"
 +source "/usr/share/ppa-download-counter/bash-ini-parser"

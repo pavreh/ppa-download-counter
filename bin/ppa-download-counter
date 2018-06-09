@@ -322,7 +322,6 @@ done
 
 ##############################################################################
 
-
 source "../share/ppa-download-counter/bash-ini-parser"
 
 run=1
