@@ -345,6 +345,7 @@ do
         --button="$(gettext Close)":0 \
         --button="$(gettext Settings)":1 \
         --button="$(gettext Refresh)":2 \
+        --response=2 \
         --width=620 \
         --height=400 \
         --column="PPA" \
